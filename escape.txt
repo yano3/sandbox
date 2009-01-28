@@ -1,3 +1,5 @@
 escape test
 hoge
 fuga
+
+PROMPT=$'%{\e[1;32m%}%n@%m%{\e[1;0m%}:%{\e[1;34m%}%~%{\e[1;0m%}%(!.#.$) '
