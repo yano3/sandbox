@@ -8,7 +8,7 @@ import (
 var version = ""
 
 func main() {
-	fmt.Printf("sandbox version %s\n", getVersion())
+	fmt.Printf("sandbox %s\n", getVersion())
 }
 
 func getVersion() string {
