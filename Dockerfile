@@ -1,4 +1,4 @@
-FROM golang:1.17-buster AS build
+FROM golang:1.18-bullseye AS build
 
 ARG VERSION
 
@@ -7,7 +7,7 @@ COPY . /go/src/sandbox
 
 RUN CGO_ENABLED=0 go build -ldflags "-s -w -X main.version=${VERSION}" -o /go/bin/sandbox
 
-FROM debian:buster-slim
+FROM debian:bullseye-slim
 
 COPY --from=build /go/bin/sandbox /
 
